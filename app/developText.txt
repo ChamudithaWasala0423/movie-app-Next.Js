@@ -1,0 +1,4 @@
+//intall NextJs App
+//install shadCN components
+//install shadCN Button components
+//install shadCN Darkmood
