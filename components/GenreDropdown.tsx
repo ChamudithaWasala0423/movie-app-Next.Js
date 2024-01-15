@@ -1,9 +1,7 @@
-require("dotenv").config();
 import { Genres } from "@/typing";
 
 async function GenreDropdown() {
-  const url =
-    "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc";
+  const url = "https://api.themoviedb.org/3/genre/movie/list?language=en-US";
   const options: RequestInit = {
     method: "GET",
     headers: {
@@ -17,6 +15,8 @@ async function GenreDropdown() {
 
   const response = await fetch(url, options);
   const data = (await response.json()) as Genres;
+
+  console.log(data);
 
   return <div>GenreDropdown</div>;
 }
