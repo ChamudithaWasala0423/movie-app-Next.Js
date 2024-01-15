@@ -1,4 +1,5 @@
 require("dotenv").config();
+import { Genres } from "@/typing";
 
 async function GenreDropdown() {
   const url =
@@ -15,6 +16,7 @@ async function GenreDropdown() {
   };
 
   const response = await fetch(url, options);
+  const data = (await response.json()) as Genres;
 
   return <div>GenreDropdown</div>;
 }
