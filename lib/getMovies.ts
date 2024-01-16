@@ -60,7 +60,7 @@ export async function getDiscoverMovies(id?:string, keywords?: string){
 export async function getSearchMovies(item: string){
     const url = new URL("https://api.themoviedb.org/3/search/movie");
 
-    url.searchParams.set("query", "term");
+    url.searchParams.set("query", item);
 
     const data = await fetchFromTMDB(url);
     return data.results;
