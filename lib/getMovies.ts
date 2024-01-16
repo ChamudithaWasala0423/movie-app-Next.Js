@@ -66,3 +66,4 @@ export async function getSearchMovies(item: string){
     return data.results;
 }
 
+
